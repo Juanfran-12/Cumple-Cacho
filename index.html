@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>¡Feliz cumpleaños, tío! 🎂</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =================================
+         BIENVENIDA
+    ================================== -->
+
+    <header class="hero">
+
+        <div class="balloon balloon-1">🎈</div>
+        <div class="balloon balloon-2">🎈</div>
+        <div class="balloon balloon-3">🎈</div>
+        <div class="balloon balloon-4">🎈</div>
+
+
+        <div class="hero-content">
+
+            <div class="cake">
+                🎂
+            </div>
+
+            <h1>
+                ¡Feliz cumpleaños, Cacho!
+            </h1>
+
+            <h2>
+                ❤️ Esta página es para vos ❤️
+            </h2>
+
+            <p>
+                Aunque hoy no pueda estar ahí para festejar
+                juntos, preparé algo especial para vos.
+            </p>
+
+            <button
+                class="main-button"
+                onclick="irAlRegalo()"
+            >
+                🎁 Abrir mi regalo
+            </button>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =================================
+         REGALO
+    ================================== -->
+
+    <section
+        class="gift-section"
+        id="regalo"
+    >
+
+        <h2 class="section-title">
+            🎁 Una pequeña sorpresa
+        </h2>
+
+        <p class="subtitle">
+            Tocá la caja para descubrir qué hay adentro
+        </p>
+
+
+        <div
+            class="gift"
+            id="gift"
+            onclick="abrirRegalo()"
+        >
+
+            <div class="gift-lid">
+
+                <div class="ribbon-top"></div>
+
+            </div>
+
+
+            <div class="gift-box">
+
+                <div class="ribbon"></div>
+
+            </div>
+
+        </div>
+
+
+        <p
+            class="gift-message"
+            id="giftMessage"
+        >
+            Tocá la caja 🎁
+        </p>
+
+    </section>
+
+
+
+    <!-- =================================
+         CARTA
+    ================================== -->
+
+    <section class="letter-section">
+
+        <h2 class="section-title">
+            💌 Un mensaje para vos
+        </h2>
+
+
+        <div class="letter">
+
+            <div class="letter-icon">
+                💌
+            </div>
+
+
+            <p>
+                Cachito:
+            </p>
+
+
+            <p>
+                Hoy quería estar ahí para
+                compartir un rato juntos y festejar tu
+                cumple.
+            </p>
+
+
+            <p>
+                Pero aunque la distancia nos separe un
+                poquito, no quería dejar pasar este día
+                sin hacerte algo especial.
+            </p>
+
+
+            <p>
+                Por eso hice esta página especialmente
+            </p>
+
+
+            <p>
+                Espero que tengas un cumpleaños increíble,
+                que disfrutes muchísimo tu día y que
+                podamos festejar juntos muy pronto.
+            </p>
+
+
+            <p>
+                ¡Te mando un abrazo enorme hasta Santa Fe!
+                ❤️
+            </p>
+
+
+            <div class="signature">
+                Con mucho cariño ❤️
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================
+         MÚSICA
+    ================================== -->
+
+  <section class="music-section">
+
+    <h2 class="section-title">
+        🎬 Un último mensaje
+    </h2>
+
+    <p class="subtitle">
+        Espero que te guste ❤️
+    </p>
+
+  <div class="youtube-box">
+  <section class="video-section">
+
+    <h2 class="section-title">
+        🎬 Un último mensaje
+    </h2>
+
+    <p class="subtitle">
+        Esto es especialmente para vos ❤️
+    </p>
+
+    <a href="https://youtu.be/xbbVo1PVruA"
+       target="_blank"
+       class="video-button">
+        ▶️ VER MI VIDEO
+    </a>
+
+</section>
+</div>
+</section>
+
+    </div>
+
+</section>
+
+
+    <!-- =================================
+         VIAJE A SANTA FE
+    ================================== -->
+
+    <section class="travel-section">
+
+        <h2 class="section-title">
+            ✈️ Un abrazo hasta Santa Fe
+        </h2>
+
+
+        <p class="travel-text">
+            Aunque no pueda viajar para estar ahí,
+            este mensaje recorre la distancia para
+            llegar hasta vos.
+        </p>
+
+
+        <div class="route">
+
+            <div class="route-line"></div>
+
+
+            <div class="city city-start">
+                ❤️ Desde acá
+            </div>
+
+
+            <div
+                class="plane"
+                id="plane"
+            >
+                ✈️
+            </div>
+
+
+            <div class="city city-end">
+                📍 Santa Fe
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================
+         MENSAJE FINAL
+    ================================== -->
+
+    <footer class="final">
+
+        <div class="final-hearts">
+            ❤️ 🎂 ❤️
+        </div>
+
+
+        <h2>
+            ¡Feliz cumpleaños!
+        </h2>
+
+
+        <p>
+            Espero que disfrutes muchísimo tu día
+            y que podamos festejar juntos muy pronto.
+        </p>
+
+
+        <p class="distance-message">
+            La distancia no cambia el cariño. ❤️
+        </p>
+
+
+        <div class="final-emojis">
+            🎉 🎈 🎂 🎈 🎉
+        </div>
+
+    </footer>
+
+
+
+    <!-- =================================
+         JAVASCRIPT
+    ================================== -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

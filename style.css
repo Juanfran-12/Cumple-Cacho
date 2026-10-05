@@ -1,0 +1,962 @@
+/* =========================================
+   CONFIGURACIÓN GENERAL
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    background: #fff7e8;
+
+    color: #30253b;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 30px;
+
+    position: relative;
+
+    overflow: hidden;
+
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff0f5,
+            #fff7dc,
+            #eaf5ff
+        );
+}
+
+
+.hero-content {
+
+    max-width: 850px;
+
+    z-index: 2;
+
+    animation: aparecer 1.5s ease;
+}
+
+
+.cake {
+
+    font-size: 80px;
+
+    margin-bottom: 15px;
+
+    animation:
+        flotar 3s ease-in-out infinite;
+}
+
+
+.hero h1 {
+
+    font-size:
+        clamp(45px, 9vw, 90px);
+
+    color: #7b315d;
+
+    margin-bottom: 20px;
+}
+
+
+.hero h2 {
+
+    font-size:
+        clamp(25px, 5vw, 45px);
+
+    color: #d18a27;
+
+    margin-bottom: 25px;
+}
+
+
+.hero p {
+
+    font-size:
+        clamp(18px, 3vw, 25px);
+
+    line-height: 1.6;
+
+    color: #594c62;
+
+    max-width: 700px;
+
+    margin: auto;
+}
+
+
+/* =========================================
+   BOTÓN PRINCIPAL
+========================================= */
+
+.main-button {
+
+    margin-top: 35px;
+
+    padding: 18px 35px;
+
+    border: none;
+
+    border-radius: 50px;
+
+    background: #d18a27;
+
+    color: white;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,.2);
+
+    transition: .3s;
+}
+
+
+.main-button:hover {
+
+    transform:
+        translateY(-5px)
+        scale(1.05);
+
+    background: #b87316;
+}
+
+
+/* =========================================
+   GLOBOS
+========================================= */
+
+.balloon {
+
+    position: absolute;
+
+    font-size: 65px;
+
+    animation:
+        flotar 4s ease-in-out infinite;
+}
+
+
+.balloon-1 {
+
+    left: 5%;
+
+    top: 15%;
+}
+
+
+.balloon-2 {
+
+    right: 7%;
+
+    top: 20%;
+
+    animation-delay: 1s;
+}
+
+
+.balloon-3 {
+
+    left: 10%;
+
+    bottom: 15%;
+
+    animation-delay: 2s;
+}
+
+
+.balloon-4 {
+
+    right: 10%;
+
+    bottom: 12%;
+
+    animation-delay: 1.5s;
+}
+
+
+/* =========================================
+   SECCIONES
+========================================= */
+
+section {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 90px 20px;
+}
+
+
+.section-title {
+
+    text-align: center;
+
+    font-size:
+        clamp(35px, 6vw, 55px);
+
+    color: #7b315d;
+
+    margin-bottom: 25px;
+}
+
+
+.subtitle {
+
+    text-align: center;
+
+    font-size: 20px;
+
+    color: #777;
+
+    margin-bottom: 40px;
+}
+
+
+/* =========================================
+   REGALO
+========================================= */
+
+.gift-section {
+
+    text-align: center;
+}
+
+
+.gift {
+
+    width: 200px;
+
+    height: 180px;
+
+    margin: 60px auto 25px;
+
+    position: relative;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+
+.gift:hover {
+
+    transform: scale(1.07);
+}
+
+
+/* CAJA */
+
+.gift-box {
+
+    position: absolute;
+
+    bottom: 0;
+
+    left: 25px;
+
+    width: 150px;
+
+    height: 110px;
+
+    background: #d94f70;
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 15px 30px rgba(0,0,0,.2);
+}
+
+
+/* CINTA */
+
+.ribbon {
+
+    position: absolute;
+
+    left: 60px;
+
+    width: 30px;
+
+    height: 100%;
+
+    background: #f5c64c;
+}
+
+
+/* TAPA */
+
+.gift-lid {
+
+    position: absolute;
+
+    z-index: 2;
+
+    left: 10px;
+
+    top: 35px;
+
+    width: 180px;
+
+    height: 38px;
+
+    background: #c83d61;
+
+    border-radius: 7px;
+
+    transition:
+        transform .8s ease;
+}
+
+
+/* CINTA DE LA TAPA */
+
+.ribbon-top {
+
+    position: absolute;
+
+    left: 75px;
+
+    width: 30px;
+
+    height: 38px;
+
+    background: #f5c64c;
+}
+
+
+/* REGALO ABIERTO */
+
+.gift.open .gift-lid {
+
+    transform:
+        translateY(-100px)
+        rotate(-8deg);
+}
+
+
+.gift-message {
+
+    font-size: 21px;
+
+    color: #777;
+
+    transition: .3s;
+}
+
+
+/* =========================================
+   CARTA
+========================================= */
+
+.letter-section {
+
+    padding-top: 50px;
+}
+
+
+.letter {
+
+    max-width: 800px;
+
+    margin: auto;
+
+    padding: 55px;
+
+    position: relative;
+
+    background: #fffdf7;
+
+    border:
+        1px solid #e7d6b8;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.15);
+
+    transform: rotate(-1deg);
+}
+
+
+.letter-icon {
+
+    position: absolute;
+
+    top: -30px;
+
+    left: 25px;
+
+    font-size: 50px;
+}
+
+
+.letter p {
+
+    font-size: 21px;
+
+    line-height: 1.8;
+
+    color: #4d4350;
+
+    margin-bottom: 20px;
+}
+
+
+.signature {
+
+    text-align: right;
+
+    font-size: 25px;
+
+    color: #7b315d;
+
+    margin-top: 35px;
+}
+
+
+/* =========================================
+   MÚSICA
+========================================= */
+
+.music-section {
+
+    text-align: center;
+
+    background:
+        rgba(255,255,255,.6);
+
+    border-radius: 30px;
+}
+
+
+.music-icon {
+
+    font-size: 75px;
+
+    margin-bottom: 15px;
+
+    animation:
+        musica 1s infinite alternate;
+}
+
+
+/* VIDEO */
+
+.youtube-box {
+    width: 90%;
+    max-width: 1000px;
+    height: 560px;
+    margin: 40px auto;
+    background: #000;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.youtube-box iframe {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border: none;
+}
+
+@media (max-width: 700px) {
+
+    .youtube-box {
+        width: 100%;
+        height: 250px;
+    }
+
+}
+
+
+/* =========================================
+   VIAJE
+========================================= */
+
+.travel-section {
+
+    text-align: center;
+}
+
+
+.travel-text {
+
+    font-size: 21px;
+
+    line-height: 1.7;
+
+    max-width: 800px;
+
+    margin: auto;
+}
+
+
+.route {
+
+    max-width: 850px;
+
+    height: 180px;
+
+    margin: 70px auto 0;
+
+    position: relative;
+}
+
+
+.route-line {
+
+    position: absolute;
+
+    top: 85px;
+
+    left: 10%;
+
+    width: 80%;
+
+    height: 5px;
+
+    background: #d18a27;
+
+    border-radius: 10px;
+}
+
+
+.city {
+
+    position: absolute;
+
+    top: 55px;
+
+    padding: 12px 18px;
+
+    border-radius: 20px;
+
+    background: #7b315d;
+
+    color: white;
+
+    font-weight: bold;
+
+    z-index: 2;
+}
+
+
+.city-start {
+
+    left: 0;
+}
+
+
+.city-end {
+
+    right: 0;
+}
+
+
+.plane {
+
+    position: absolute;
+
+    top: 20px;
+
+    left: 10%;
+
+    font-size: 45px;
+
+    z-index: 3;
+
+    animation:
+        volar 5s ease-in-out infinite;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.final {
+
+    max-width: none;
+
+    text-align: center;
+
+    padding: 120px 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #7b315d,
+            #4c315f
+        );
+
+    color: white;
+}
+
+
+.final h2 {
+
+    font-size:
+        clamp(40px, 7vw, 70px);
+
+    margin-bottom: 30px;
+}
+
+
+.final p {
+
+    max-width: 800px;
+
+    margin: auto;
+
+    font-size: 23px;
+
+    line-height: 1.7;
+}
+
+
+.final-hearts {
+
+    font-size: 45px;
+
+    margin-bottom: 30px;
+
+    animation:
+        latir 1.2s infinite;
+}
+
+
+.distance-message {
+
+    margin-top: 30px !important;
+}
+
+
+.final-emojis {
+
+    margin-top: 40px;
+
+    font-size: 30px;
+}
+
+
+/* =========================================
+   CONFETI
+========================================= */
+
+.confetti {
+
+    position: fixed;
+
+    top: -20px;
+
+    width: 10px;
+
+    height: 15px;
+
+    z-index: 9999;
+
+    pointer-events: none;
+
+    animation:
+        caer linear forwards;
+}
+
+
+/* =========================================
+   ANIMACIONES
+========================================= */
+
+@keyframes aparecer {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(30px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+@keyframes flotar {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0);
+    }
+
+    50% {
+
+        transform:
+            translateY(-25px);
+    }
+}
+
+
+@keyframes musica {
+
+    from {
+
+        transform:
+            rotate(-8deg);
+    }
+
+    to {
+
+        transform:
+            rotate(8deg);
+    }
+}
+
+
+@keyframes volar {
+
+    0% {
+
+        left: 10%;
+    }
+
+    50% {
+
+        left: 50%;
+
+        transform:
+            translateY(-25px)
+            rotate(5deg);
+    }
+
+    100% {
+
+        left: 88%;
+
+        transform:
+            translateY(0)
+            rotate(0);
+    }
+}
+
+
+@keyframes latir {
+
+    0%,
+    100% {
+
+        transform:
+            scale(1);
+    }
+
+    50% {
+
+        transform:
+            scale(1.15);
+    }
+}
+
+
+@keyframes caer {
+
+    to {
+
+        transform:
+            translateY(110vh)
+            rotate(720deg);
+    }
+}
+
+
+/* =========================================
+   CELULAR
+========================================= */
+
+@media(max-width:700px) {
+
+    .hero {
+
+        min-height: 100svh;
+
+        padding: 20px;
+    }
+
+
+    .balloon {
+
+        font-size: 45px;
+    }
+
+
+    .balloon-1 {
+
+        left: 3%;
+
+        top: 10%;
+    }
+
+
+    .balloon-2 {
+
+        right: 3%;
+
+        top: 12%;
+    }
+
+
+    .balloon-3 {
+
+        left: 5%;
+
+        bottom: 8%;
+    }
+
+
+    .balloon-4 {
+
+        right: 5%;
+
+        bottom: 8%;
+    }
+
+
+    .letter {
+
+        padding: 40px 25px;
+    }
+
+
+    .letter p {
+
+        font-size: 18px;
+    }
+
+
+    .route {
+
+        height: 200px;
+    }
+
+
+    .city {
+
+        font-size: 14px;
+
+        padding: 10px 12px;
+    }
+
+
+    .plane {
+
+        font-size: 35px;
+    }
+
+}
+.music-section iframe {
+    display: block;
+    width: 90%;
+    max-width: 1000px;
+    height: 500px;
+    margin: 40px auto;
+    border: none;
+    border-radius: 20px;
+}
+.youtube-box {
+    width: 90%;
+    max-width: 1000px;
+    height: 560px;
+
+    margin: 40px auto;
+
+    background: #000;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.youtube-box iframe {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    border: none;
+}
+
+@media (max-width: 700px) {
+
+    .youtube-box {
+        width: 100%;
+        height: 250px;
+    }
+
+}
+.video-button {
+    display: block;
+    width: fit-content;
+    margin: 40px auto;
+    padding: 18px 35px;
+    background: #d18a27;
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+    border-radius: 50px;
+    box-shadow: 0 10px 25px rgba(0,0,0,.2);
+    transition: .3s;
+}
+
+.video-button:hover {
+    transform: scale(1.08);
+    background: #b87316;
+}
